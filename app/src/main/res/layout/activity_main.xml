@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/main_title"/>
+
+    <RelativeLayout
+        android:id="@+id/main_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_bar_normal_bg"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_session_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/tab_chat_bg"
+                android:onClick="onClickTabButton"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="最近会话"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_contacts_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/tab_contact_list_bg"
+                android:onClick="onClickTabButton"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="联系人"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

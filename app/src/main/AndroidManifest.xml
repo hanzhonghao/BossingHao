@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="cn.yumutech.xmpp_20161025"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".activity.MainActivity">
+        </activity>
+        <provider
+            android:authorities="cn.yumutech.xmpp_20161025.provider.ContactsProvider"
+            android:name=".provider.ContactsProvider"/>
+    </application>
+
+</manifest>

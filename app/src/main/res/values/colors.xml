@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="skin_blue">#ff0057af</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+
+</resources>
