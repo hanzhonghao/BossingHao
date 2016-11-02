@@ -71,7 +71,7 @@ public class ContactsProvider extends ContentProvider {
                     uri = ContentUris.withAppendedId(uri, id);
                     // 通知ContentObserver数据改变了
                     // getContext().getContentResolver().notifyChange(ContactsProvider.URI_CONTACT,"指定只有某一个observer可以收到");//
-                    //getContext().getContentResolver().notifyChange(ContactsProvider.URI_CONTACT, null);// 为null就是所有都可以收到
+                    getContext().getContentResolver().notifyChange(ContactsProvider.URI_CONTACT, null);// 为null就是所有都可以收到
 
                 }
                 break;
@@ -93,6 +93,7 @@ public class ContactsProvider extends ContentProvider {
                 deleteCount = db.delete(ContactOpenHelper.T_CONTACT, selection, selectionArgs);
                 if (deleteCount > 0) {
                     System.out.println("--------ContactsProvider---deletetSuccess--------");
+                    getContext().getContentResolver().notifyChange(ContactsProvider.URI_CONTACT, null);// 为null就是所有都可以收到
                 }
                 break;
         }
@@ -110,6 +111,7 @@ public class ContactsProvider extends ContentProvider {
                 updateCount = db.update(ContactOpenHelper.T_CONTACT, values, selection, selectionArgs);
                 if (updateCount > 0) {
                     System.out.println("--------ContactsProvider---updatetSuccess--------");
+                    getContext().getContentResolver().notifyChange(ContactsProvider.URI_CONTACT, null);
                 }
                 break;
         }

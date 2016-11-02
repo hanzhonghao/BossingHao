@@ -29,6 +29,7 @@
         <provider
             android:authorities="cn.yumutech.xmpp_20161025.provider.ContactsProvider"
             android:name=".provider.ContactsProvider"/>
+        <service android:name=".service.IMService"/>
     </application>
 
 </manifest>

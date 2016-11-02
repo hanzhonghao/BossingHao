@@ -77,6 +77,10 @@ public class LoginActivity extends AppCompatActivity {
 
                             //需要保存连接对象
                             IMService.conn = conn;
+
+                            //启动IMService
+                            Intent service = new Intent(LoginActivity.this, IMService.class);
+                            startService(service);
                         } catch (XMPPException e) {
                             e.printStackTrace();
                             ToastUtils.showToastSafe(LoginActivity.this, "登录失败");
