@@ -23,7 +23,6 @@ import cn.yumutech.xmpp_20161025.utils.ThreadUtils;
  */
 public class IMService extends Service {
     public static XMPPConnection conn;
-
     private Roster mRoster;
     private MyRosterListener mRosterListener;
 
@@ -142,7 +141,6 @@ public class IMService extends Service {
                 getContentResolver().update(ContactsProvider.URI_CONTACT, values,
                         ContactOpenHelper.ContactTable.ACCOUNT + "=?", new String[] { account });
         if (updateCount <= 0) {// 没有更新到任何记录
-            getContentResolver().insert(ContactsProvider.URI_CONTACT, values);
         }
     }
 }

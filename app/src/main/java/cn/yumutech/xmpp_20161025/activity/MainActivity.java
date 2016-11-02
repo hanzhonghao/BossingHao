@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
         mFragementTransaction = getSupportFragmentManager().beginTransaction();
         int id = view.getId();
         if (id == R.id.btn_session_chat) {
-            mSessionFragment = SessionFragment.getInstance();
+            mSessionFragment = new SessionFragment();
             mFragementTransaction.replace(R.id.main_fragment_content, mSessionFragment);
             mMainTvTitle.setText(mToolBarTitleArr[0]);
         } else if (id == R.id.btn_contacts_chat) {
-            mContactsFragment = ContactsFragment.getInstance();
+            mContactsFragment = new ContactsFragment();
             mFragementTransaction.replace(R.id.main_fragment_content, mContactsFragment);
             mMainTvTitle.setText(mToolBarTitleArr[1]);
         }

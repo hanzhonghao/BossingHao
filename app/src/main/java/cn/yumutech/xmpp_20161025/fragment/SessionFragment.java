@@ -14,7 +14,6 @@ import cn.yumutech.xmpp_20161025.R;
  * A simple {@link Fragment} subclass.
  */
 public class SessionFragment extends Fragment {
-    private static SessionFragment sessionFragment;
 
     public SessionFragment() {
         // Required empty public constructor
@@ -26,10 +25,4 @@ public class SessionFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_session, container, false);
     }
 
-    public static SessionFragment getInstance() {
-        if (sessionFragment == null){
-            sessionFragment = new SessionFragment();
-        }
-        return sessionFragment;
-    }
 }

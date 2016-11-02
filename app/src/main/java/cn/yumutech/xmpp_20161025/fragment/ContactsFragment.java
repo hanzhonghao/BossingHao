@@ -28,16 +28,8 @@ import cn.yumutech.xmpp_20161025.utils.ThreadUtils;
  * @描述 联系人的Fagment
  */
 public class ContactsFragment extends Fragment {
-    private static ContactsFragment contactsFragments;
     private ListView mListView;
     private CursorAdapter mAdapter;
-
-    public static ContactsFragment getInstance() {
-        if (contactsFragments == null) {
-            contactsFragments = new ContactsFragment();
-        }
-        return contactsFragments;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
